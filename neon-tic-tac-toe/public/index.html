@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tic-Tac-Toe</title>
+    <meta name="description" content="A neon-themed Tic-Tac-Toe web app.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="game-over-announcement" class="hidden"></div>
+        <h1 class="title">TIC <span class="cyan">TAC</span> <span class="magenta">TOE</span></h1>
+        
+        <div class="layout-wrapper">
+            
+            <!-- Left Side: Game Board -->
+            <div class="game-area">
+                <div class="status">
+                    Current Turn: <span id="current-turn" class="cyan">PLAYER 1 (X)</span>
+                </div>
+
+                <div class="board" id="board">
+                    <div id="winning-line" class="winning-line"></div>
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+
+                <div class="actions" style="display: flex; gap: 15px; margin-bottom: 5px;">
+                    <button id="reset-btn">RESTART SYSTEM</button>
+                </div>
+                <div class="themes" style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                    <button class="theme-btn" data-theme="got">PLAY GoT</button>
+                    <button class="theme-btn" data-theme="pacman">PLAY PAC-MAN</button>
+                    <button class="theme-btn" data-theme="mario">PLAY MARIO</button>
+                    <button class="theme-btn" data-theme="shinchan">PLAY SHINCHAN</button>
+                </div>
+            </div>
+
+            <!-- Right Side: Scoreboard -->
+            <div class="scoreboard">
+                <h2>SCORE</h2>
+                <div class="score-row">
+                    <span class="score-name cyan">PLAYER 1</span>
+                    <span id="score-x" class="score-value cyan">0</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-name magenta">PLAYER 2</span>
+                    <span id="score-o" class="score-value magenta">0</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
